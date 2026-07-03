@@ -1,0 +1,11 @@
+# Copy this to ~/.dbt/profiles.yml, OR set:
+#   export DBT_PROFILES_DIR=$(pwd)/dbt_project
+# and rename this file to profiles.yml (adjust the 'path' below if needed).
+
+hmda_fair_lending:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: ../data/hmda.duckdb
+      threads: 4

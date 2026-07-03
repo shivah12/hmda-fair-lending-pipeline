@@ -1,0 +1,28 @@
+# Python
+venv/
+.venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+
+# VS Code
+.vscode/
+.idea/
+
+# dbt
+dbt_project/target/
+dbt_project/logs/
+dbt_project/profiles.yml
+dbt_project/.user.yml
+.dbt/
+
+
+data/**
+!data/
+!data/README.md
+!data/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db

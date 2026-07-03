@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: stg_hmda_lar
+    description: >
+      Cleaned, typed HMDA LAR records restricted to originated or denied
+      applications with known race, ethnicity, and loan amount -- the
+      minimum viable population for a fair lending disparity analysis.
+    columns:
+      - name: lei
+        description: Legal Entity Identifier of the reporting lender
+        tests:
+          - not_null
+      - name: activity_year
+        tests:
+          - not_null
+      - name: race
+        description: CFPB-derived applicant race category
+        tests:
+          - not_null
+      - name: ethnicity
+        description: CFPB-derived applicant ethnicity category
+        tests:
+          - not_null
+      - name: approved
+        description: 1 = originated/approved, 0 = denied
+        tests:
+          - not_null
+          - accepted_values:
+              values: [0, 1]
+      - name: loan_amount
+        tests:
+          - not_null

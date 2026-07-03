@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: fct_applications
+    description: One row per HMDA application, ready for fair lending analysis.
+    columns:
+      - name: approved
+        tests:
+          - not_null
+          - accepted_values:
+              values: [0, 1]
+      - name: protected_group
+        tests:
+          - not_null
+
+  - name: dim_lender
+    description: Lender-level (LEI) application volume and approval rate by year.
+    columns:
+      - name: lei
+        tests:
+          - not_null
+
+  - name: dim_geography
+    description: County-level application volume and approval rate by year.

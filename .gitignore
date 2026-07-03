@@ -1,4 +1,4 @@
-# Python
+
 venv/
 .venv/
 env/
@@ -6,11 +6,11 @@ ENV/
 __pycache__/
 *.py[cod]
 
-# VS Code
+
 .vscode/
 .idea/
 
-# dbt
+
 dbt_project/target/
 dbt_project/logs/
 dbt_project/profiles.yml
@@ -19,10 +19,15 @@ dbt_project/.user.yml
 
 
 data/**
+
 !data/
 !data/README.md
 !data/.gitkeep
+!data/air_results.parquet
+!data/fair_lending_results.parquet
+!data/regression_results.parquet
+!data/z_test_results.parquet
 
-# OS
+
 .DS_Store
 Thumbs.db

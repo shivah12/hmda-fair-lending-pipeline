@@ -1,6 +1,6 @@
-# HMDA Fair Lending Data Pipeline
+# US HMDA Fair Lending Data Pipeline
 
-End-to-end data engineering project: ingests CFPB HMDA (Home Mortgage Disclosure Act)
+It is an end-to-end data engineering project: ingests CFPB HMDA (Home Mortgage Disclosure Act)
 public loan-level data, models it with dbt on DuckDB, and runs a CFPB-style fair
 lending disparity analysis (Adverse Impact Ratio, logistic regression, two-proportion
 z-tests) to detect statistically significant racial approval gaps.
